@@ -14,9 +14,9 @@ function listNestedFiles(dir, cb) {
 	});
 }
 
-function finish(err, res) {
+function finish(err, files) {
 	if (err) return console.error(err);
-	console.log(res, 'have been found');
+	console.log(files, 'have been found');
 }
 
 listNestedFiles(process.argv[2], finish);
